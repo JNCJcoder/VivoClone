@@ -7,7 +7,7 @@
 <h4 align="center">Clone da UI(Interface Grafica) do Aplicativo da Vivo: "Meu Vivo Movel" para Android.</h4>
 
 <h1 align="center">
-<img src="assets/inicio.jpg?raw=true" alt="Imagem do Aplicativo" width="300px">
+<img src="assets/Inicio.jpg?raw=true" alt="Imagem do Aplicativo" width="300px">
 </h1>
 
 ## 💻 Informações:
