@@ -80,16 +80,22 @@ function Routes() {
         tabBarIcon: ({ focused, color }) => {
           let iconName;
 
-          if (route.name === 'Meu Plano') {
-            iconName = focused ? 'ios-stats' : 'ios-stats';
-          } else if (route.name === 'Descubra') {
-            iconName = focused ? 'md-eye' : 'md-eye';
-          } else if (route.name === 'Aura') {
-            iconName = focused ? 'ios-keypad' : 'ios-keypad';
-          } else if (route.name === 'Suporte') {
-            iconName = focused ? 'ios-construct' : 'ios-construct';
-          } else if (route.name === 'Perfil') {
-            iconName = focused ? 'ios-person' : 'ios-person';
+          switch (route.name) {
+            case 'Meu Plano':
+              iconName = focused ? 'ios-stats' : 'ios-stats';
+              break;
+            case 'Descubra':
+              iconName = focused ? 'md-eye' : 'md-eye';
+              break;
+            case 'Aura':
+              iconName = focused ? 'ios-keypad' : 'ios-keypad';
+              break;
+            case 'Suporte':
+              iconName = focused ? 'ios-construct' : 'ios-construct';
+              break;
+            case 'Perfil':
+              iconName = focused ? 'ios-person' : 'ios-person';
+              break;
           }
 
           // You can return any component that you like here!
