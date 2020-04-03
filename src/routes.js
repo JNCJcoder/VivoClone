@@ -25,7 +25,15 @@ export default function RotaInicial() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        initialRouteName="Inicio"
+        headerMode="float"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#670099',
+          },
+          headerTintColor: '#fff',
+        }}>
         <Stack.Screen
           name="Inicio"
           component={Inicio}
@@ -36,10 +44,6 @@ export default function RotaInicial() {
           component={Login}
           options={{
             title: 'Identifique-se',
-            headerStyle: {
-              backgroundColor: '#670099',
-            },
-            headerTintColor: '#fff',
           }}
         />
         <Stack.Screen
@@ -47,10 +51,6 @@ export default function RotaInicial() {
           component={SMS}
           options={{
             title: 'Verifique seu Número',
-            headerStyle: {
-              backgroundColor: '#670099',
-            },
-            headerTintColor: '#fff',
           }}
         />
         <Stack.Screen
@@ -58,10 +58,6 @@ export default function RotaInicial() {
           component={TOS}
           options={{
             title: 'Termos e condições',
-            headerStyle: {
-              backgroundColor: '#670099',
-            },
-            headerTintColor: '#fff',
           }}
         />
         <Stack.Screen
@@ -125,60 +121,23 @@ function MeuPlano() {
         initialRouteName="Consumo"
         headerMode="float"
         screenOptions={{
+          title: 'Meu Plano',
+          headerLeft: null,
+          headerStyle: { backgroundColor: '#670099' },
+          headerTintColor: '#fff',
+          headerRight: () => (
+            // eslint-disable-next-line react-native/no-inline-styles
+            <TouchableOpacity style={{ right: 15 }}>
+              <Icon name="ios-refresh" size={30} color="white" />
+            </TouchableOpacity>
+          ),
           gestureEnabled: true,
           gestureDirection: 'horizontal',
           CardStyleInterpolators: CardStyleInterpolators.forHorizontalIOS,
         }}>
-        <Stack.Screen
-          name="Consumo"
-          component={Consumo}
-          options={{
-            title: 'Meu Plano',
-            headerLeft: null,
-            headerStyle: { backgroundColor: '#670099' },
-            headerTintColor: '#fff',
-            headerRight: () => (
-              // eslint-disable-next-line react-native/no-inline-styles
-              <TouchableOpacity style={{ right: 15 }}>
-                <Icon name="ios-refresh" size={30} color="white" />
-              </TouchableOpacity>
-            ),
-          }}
-        />
-        <Stack.Screen
-          name="Conta"
-          component={Conta}
-          options={{
-            title: 'Meu Plano',
-            headerLeft: null,
-            headerStyle: {
-              backgroundColor: '#670099',
-            },
-            headerTintColor: '#fff',
-            headerRight: () => (
-              // eslint-disable-next-line react-native/no-inline-styles
-              <TouchableOpacity style={{ right: 15 }}>
-                <Icon name="ios-refresh" size={30} color="white" />
-              </TouchableOpacity>
-            ),
-          }}
-        />
-        <Stack.Screen
-          name="Servicos"
-          component={Servicos}
-          options={{
-            title: 'Meu Plano',
-            headerLeft: null,
-            headerStyle: { backgroundColor: '#670099' },
-            headerTintColor: '#fff',
-            headerRight: () => (
-              // eslint-disable-next-line react-native/no-inline-styles
-              <TouchableOpacity style={{ right: 15 }}>
-                <Icon name="ios-refresh" size={30} color="white" />
-              </TouchableOpacity>
-            ),
-          }}
-        />
+        <Stack.Screen name="Consumo" component={Consumo} />
+        <Stack.Screen name="Conta" component={Conta} />
+        <Stack.Screen name="Servicos" component={Servicos} />
       </Stack.Navigator>
     </>
   );
@@ -187,7 +146,7 @@ function MeuPlano() {
 function meuPerfil() {
   return (
     <>
-      <Stack.Navigator gestureEnabled={false}>
+      <Stack.Navigator>
         <Stack.Screen
           name="Perfil"
           component={Perfil}
