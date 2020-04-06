@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
+import Color from '../../../config/Theme';
+
 export const Container = styled.ScrollView`
   flex: 1;
-  background: rgb(248, 248, 248);
+  background: ${Color.background};
 `;
 
 export const Titulo = styled.Text`
   margin-left: 5%;
   margin-top: 8%;
   font-size: 25px;
-  color: #670099;
+  color: ${Color.primary};
   margin-bottom: 2px;
 `;
 
@@ -27,7 +29,7 @@ export const ContaContainer = styled.View`
   margin-top: 10px;
   padding-left: 20px;
   padding-top: 15px;
-  background-color: rgb(255, 255, 255);
+  background-color: ${Color.secondary};
   border-radius: 5px;
   border-top-width: 5px;
   border-color: orange;

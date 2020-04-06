@@ -2,9 +2,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import styled from 'styled-components';
 
+import Color from '../../../config/Theme';
+
 export const Container = styled.ScrollView`
   flex: 1;
-  background: rgb(248, 248, 248);
+  background: ${Color.background};
 `;
 
 export const Atualizado = styled.Text`
@@ -30,7 +32,7 @@ export const PlanoContainer = styled.View`
   margin-left: 15px;
   margin-bottom: 15px;
   padding-left: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: ${Color.secondary};
   border-color: #000;
   border-width: 0.1px;
   border-radius: 5px;
@@ -78,7 +80,7 @@ export const CircleBar = styled.View`
 `;
 
 export const CircleBarBlue = styled(CircleBar)`
-  background-color: #670099;
+  background-color: ${Color.primary};
 `;
 
 export const Renova = styled.Text`
@@ -118,7 +120,7 @@ export const PurpleSquare = styled.View`
   margin-bottom: 10px;
   width: 100%;
   height: 170px;
-  background-color: #670099;
+  background-color: ${Color.primary};
 `;
 
 export const ShareContainer = styled(PlanoContainer)`
@@ -154,7 +156,7 @@ export const ShareText = styled.Text`
   margin-bottom: 20px;
   margin-top: 20px;
   font-weight: bold;
-  color: #670099;
+  color: ${Color.primary};
   text-align: left;
 `;
 
@@ -174,7 +176,7 @@ export const DetailText = styled(ShareText)`
   margin-left: 15px;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #670099;
+  color: ${Color.primary};
   text-align: left;
 `;
 

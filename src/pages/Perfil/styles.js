@@ -2,9 +2,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import styled from 'styled-components';
 
+import Color from '../../config/Theme';
+
 export const Container = styled.ScrollView`
   flex: 1;
-  background: #f8f8f8;
+  background: ${Color.background};
 `;
 
 export const Atualizado = styled.Text`
@@ -21,7 +23,7 @@ export const PerfilContainer = styled.View`
   flex-direction: row;
   width: 100%;
   height: 100px;
-  background-color: #670099;
+  background-color: ${Color.primary};
 `;
 
 export const InfoPerfil = styled.View`
@@ -32,7 +34,7 @@ export const PerfilNome = styled.Text`
   margin-left: 20px;
   font-size: 19px;
   font-weight: bold;
-  color: #fff;
+  color: ${Color.secondary};
   align-self: center;
 `;
 
@@ -71,7 +73,7 @@ export const ConfigContainer = styled(PerfilContainer)`
   height: 100%;
   margin-left: 0px;
   margin-bottom: 10px;
-  background-color: #fff;
+  background-color: ${Color.secondary};
   color: grey;
   flex-direction: column;
 `;

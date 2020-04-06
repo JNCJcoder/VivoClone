@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Color from '../../../config/Theme';
+
 export const Container = styled.View`
   flex: 1;
   background: #000;
@@ -29,7 +31,7 @@ export const InfoItem = styled.View`
 export const Titulo = styled.Text`
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: ${Color.secondary};
   align-self: center;
   margin-bottom: 10px;
 `;
@@ -37,7 +39,7 @@ export const Titulo = styled.Text`
 export const Description = styled.Text`
   max-width: 90%;
   font-size: 15px;
-  color: #fff;
+  color: ${Color.secondary};
   align-self: center;
   text-align: center;
 `;
@@ -49,13 +51,13 @@ export const Button = styled.TouchableOpacity`
   border-bottom-width: 3px;
   border-style: solid;
   border-color: rgb(91, 4, 134);
-  background: #670099;
+  background: ${Color.primary};
   align-self: center;
 `;
 
 export const ButtonText = styled.Text`
   font-size: 16px;
-  color: #fff;
+  color: ${Color.secondary};
   text-align: center;
   margin-top: 13px;
 `;
@@ -69,6 +71,6 @@ export const TermosLink = styled.TouchableOpacity``;
 
 export const Termos = styled.Text`
   font-size: 16px;
-  color: #fff;
+  color: ${Color.secondary};
   align-self: center;
 `;

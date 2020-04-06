@@ -3,9 +3,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import styled from 'styled-components';
 
+import Color from '../../../config/Theme';
+
 export const Container = styled.View`
   flex: 1;
-  background: #fff;
+  background: ${Color.background};
 `;
 
 export const Description = styled.Text`
@@ -31,7 +33,7 @@ export const IconButton = styled.TouchableOpacity``;
 
 export const Iconic = styled(Icon)`
   margin-left: 15px;
-  color: #fff;
+  color: ${Color.secondary};
 `;
 
 export const Button = styled.TouchableOpacity`

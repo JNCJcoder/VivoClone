@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
+import Color from '../../config/Theme';
+
 export const Container = styled.ScrollView`
   flex: 1;
-  background: rgb(248, 248, 248);
+  background: ${Color.background};
 `;
 
 export const PerfilContainer = styled.View`
   flex: 1;
   width: 100%;
   height: 200px;
-  background-color: #670099;
+  background-color: ${Color.primary};
 `;
 
 export const Titulo = styled.Text`
@@ -18,7 +20,7 @@ export const Titulo = styled.Text`
   margin-bottom: 15px;
   font-size: 19px;
   font-weight: bold;
-  color: #fff;
+  color: ${Color.secondary};
 `;
 
 export const ImagemAnuncio = styled.TouchableOpacity`
@@ -72,7 +74,7 @@ export const OfertasContainer = styled.ScrollView`
 `;
 
 export const Ofertas = styled.TouchableOpacity`
-  background-color: #670099;
+  background-color: ${Color.primary};
   width: 200px;
   height: 200px;
   border-color: black;
@@ -83,7 +85,7 @@ export const Ofertas = styled.TouchableOpacity`
 export const AdsContainer = styled.TouchableOpacity`
   margin-top: 50px;
   margin-left: 20px;
-  background-color: #670099;
+  background-color: ${Color.primary};
   width: 89%;
   height: 130px;
   border-radius: 6px;
@@ -101,7 +103,7 @@ export const FlexText = styled.View`
 export const ShopAds = styled.View`
   margin-top: 15px;
   margin-left: 20px;
-  background-color: #670099;
+  background-color: ${Color.primary};
   width: 30%;
   height: 100px;
   border-radius: 6px;

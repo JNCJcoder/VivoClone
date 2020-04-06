@@ -9,6 +9,7 @@ import {
   CardStyleInterpolators,
 } from '@react-navigation/stack';
 
+import Color from './config/Theme';
 import { Perfil, Aura, Descubra, Suporte } from './pages';
 import { Inicio, Login, SMS, TOS } from './pages/Inicio';
 import { Consumo, Conta, Servicos } from './pages/MeuPlano';
@@ -30,9 +31,9 @@ export default function RotaInicial() {
         headerMode="float"
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#670099',
+            backgroundColor: Color.primary,
           },
-          headerTintColor: '#fff',
+          headerTintColor: Color.secondary,
         }}>
         <Stack.Screen
           name="Inicio"
@@ -99,7 +100,7 @@ function Routes() {
         },
       })}
       tabBarOptions={{
-        activeTintColor: '#670099',
+        activeTintColor: Color.primary,
         inactiveTintColor: 'gray',
         labelStyle: {
           fontSize: 12,
@@ -123,8 +124,8 @@ function MeuPlano() {
         screenOptions={{
           title: 'Meu Plano',
           headerLeft: null,
-          headerStyle: { backgroundColor: '#670099' },
-          headerTintColor: '#fff',
+          headerStyle: { backgroundColor: Color.primary },
+          headerTintColor: Color.secondary,
           headerRight: () => (
             // eslint-disable-next-line react-native/no-inline-styles
             <TouchableOpacity style={{ right: 15 }}>
@@ -154,8 +155,8 @@ function meuPerfil() {
             title: 'Perfil',
             headerLeft: null,
             gestureEnabled: false,
-            headerStyle: { backgroundColor: '#670099' },
-            headerTintColor: '#fff',
+            headerStyle: { backgroundColor: Color.primary },
+            headerTintColor: Color.secondary,
           }}
         />
       </Stack.Navigator>

@@ -1,16 +1,18 @@
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import styled from 'styled-components';
+
+import Color from '../../config/Theme';
 export const Container = styled.ScrollView`
   flex: 1;
-  background: rgb(248, 248, 248);
+  background: ${Color.background};
 `;
 
 export const PerfilContainer = styled.View`
   flex: 1;
   width: 100%;
   height: 190px;
-  background-color: #670099;
+  background-color: ${Color.primary};
   margin-bottom: 50px;
 `;
 
@@ -20,7 +22,7 @@ export const Titulo = styled.Text`
   margin-bottom: 15px;
   font-size: 19px;
   font-weight: bold;
-  color: #fff;
+  color: ${Color.secondary};
 `;
 
 export const TituloName = styled.Text`
@@ -37,7 +39,7 @@ export const AjudaContainer = styled.TouchableOpacity`
   padding-left: 30px;
   width: 90%;
   height: 70px;
-  background-color: #fff;
+  background-color: ${Color.secondary};
   border: 0.5px;
   border-radius: 6px;
   flex-direction: row;
