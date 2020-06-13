@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import { RetornarSessao } from '../../../services/api';
+import { RetornarSessao } from "../../../services/api";
 import {
   Container,
   InicialContainer,
@@ -14,31 +14,35 @@ import {
   TermosContainer,
   TermosLink,
   Termos,
-} from './styles';
+} from "./styles";
 
-const VivoLogo = require('../../../assets/vivo-logo-1.png');
+const VivoLogo = require("../../../assets/vivo-logo-1.png");
 
 export default function Inicio({ navigation: { navigate } }) {
   useEffect(() => {
     GetSession();
-  });
+  }, []);
 
   const GetSession = async () => {
     const Session = RetornarSessao();
     console.log(Session);
-    if (Session === '1') {
-      navigate('Rota');
+    if (Session === "1") {
+      navigate("Rota");
     }
   };
 
   return (
     <Container>
       <InicialContainer>
-        <Logo source={VivoLogo} />
+        <Logo source={VivoLogo} resizeMode="stretch" />
         <InfoContainer
           horizontal={true}
           pagingEnabled={true}
-          showsHorizontalScrollIndicator={true}>
+          showsHorizontalScrollIndicator={true}
+          scrollEventThrottle={200}
+          decelerationRate="fast"
+          contentContainerStyle={{ alignitems: "center" }}
+        >
           <InfoItem>
             <Titulo>Viva mais no seu tempo com a Vivo</Titulo>
             <Description>
@@ -57,12 +61,12 @@ export default function Inicio({ navigation: { navigate } }) {
             <Description>Use o comando de voz para tirar duvidas</Description>
           </InfoItem>
         </InfoContainer>
-        <Button onPress={() => navigate('Login')}>
+        <Button onPress={() => navigate("Login")}>
           <ButtonText>Começar Agora</ButtonText>
         </Button>
         <TermosContainer>
           <Termos>Ao continuar, você aceita nossos</Termos>
-          <TermosLink onPress={() => navigate('TOS')}>
+          <TermosLink onPress={() => navigate("TOS")}>
             <Termos>Termos e Condições</Termos>
           </TermosLink>
         </TermosContainer>

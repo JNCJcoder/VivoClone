@@ -22,9 +22,8 @@ export const PlanoID = styled.Text`
 `;
 
 export const ContaContainer = styled.View`
-  flex: 1;
-  width: 90%;
-  margin-left: 15px;
+  align-self: center;
+  width: 95%;
   margin-bottom: 15px;
   margin-top: 10px;
   padding-left: 20px;

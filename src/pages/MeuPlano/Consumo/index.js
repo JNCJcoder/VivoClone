@@ -48,14 +48,14 @@ export default function Consumo() {
           <MinMaxContainer>
             <CircleBarBlue />
             <Renova>
-              Consumo{'             '} 0% {'              '} 0GB
+              Consumo{'            '} 0% {'             '} 0GB
             </Renova>
           </MinMaxContainer>
           <Barrinha />
           <MinMaxContainer>
             <CircleBar />
             <Renova>
-              Disponivel{'          '} 100% {'         '} 4,5GB
+              Disponivel{'         '} 100% {'        '} 4,5GB
             </Renova>
           </MinMaxContainer>
         </PlanoContainer>

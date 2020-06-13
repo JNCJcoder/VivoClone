@@ -10,6 +10,7 @@ export const Container = styled.ScrollView`
 `;
 
 export const Atualizado = styled.Text`
+  align-self: center;
   margin-left: 38%;
   margin-top: 4%;
   font-size: 12px;
@@ -28,8 +29,8 @@ export const Barrinha = styled.View`
 
 export const PlanoContainer = styled.View`
   flex: 1;
-  width: 90%;
-  margin-left: 15px;
+  align-self: center;
+  width: 95%;
   margin-bottom: 15px;
   padding-left: 20px;
   background-color: ${Color.secondary};
@@ -96,7 +97,7 @@ export const Renova = styled.Text`
 export const Button = styled.TouchableOpacity`
   margin-bottom: 15px;
   right: 1px;
-  width: 90%;
+  width: 95%;
   height: 50px;
   border-bottom-width: 3px;
   border-color: rgb(142, 191, 50);
@@ -124,9 +125,8 @@ export const PurpleSquare = styled.View`
 `;
 
 export const ShareContainer = styled(PlanoContainer)`
-  left: 15px;
   top: 0px;
-  margin-left: 0px;
+  align-self: center;
   margin-bottom: 20px;
   padding-left: 0px;
   padding-left: 20px;

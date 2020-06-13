@@ -1,9 +1,20 @@
+/* eslint-disable * */
+
+import { Dimensions } from 'react-native';
+
 import styled from 'styled-components';
 
 import Color from '../../../config/Theme';
 
+const screenWidth = Dimensions.get('window').width;
+
+//
+// Container
+//
 export const Container = styled.View`
   flex: 1;
+  padding-top: 25px;
+  justify-content: center;
   background: #000;
 `;
 
@@ -11,21 +22,29 @@ export const InicialContainer = styled.View`
   flex: 1;
 `;
 
+//
+// Logo
+//
+
 export const Logo = styled.Image`
-  left: 25px;
-  top: 20px;
-  width: 300px;
-  height: 110px;
+  margin-left: 6%;
+  width: 90%;
+  height: 20%;
 `;
+
+//
+// Info Container
+//
 
 export const InfoContainer = styled.ScrollView`
   flex: 1;
   margin-top: 160px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 `;
 
 export const InfoItem = styled.View`
-  width: 350px;
+  flex: 1;
+  width: ${screenWidth}px;
 `;
 
 export const Titulo = styled.Text`
@@ -44,6 +63,10 @@ export const Description = styled.Text`
   text-align: center;
 `;
 
+//
+// Button Começar Agora
+//
+
 export const Button = styled.TouchableOpacity`
   width: 80%;
   height: 50px;
@@ -52,6 +75,7 @@ export const Button = styled.TouchableOpacity`
   border-style: solid;
   border-color: rgb(91, 4, 134);
   background: ${Color.primary};
+  padding-top: 14px;
   align-self: center;
 `;
 
@@ -59,8 +83,11 @@ export const ButtonText = styled.Text`
   font-size: 16px;
   color: ${Color.secondary};
   text-align: center;
-  margin-top: 13px;
 `;
+
+//
+// Termos e Condições
+//
 
 export const TermosContainer = styled.View`
   flex: 1;

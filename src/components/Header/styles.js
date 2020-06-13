@@ -3,14 +3,15 @@ import styled from 'styled-components';
 export const Container = styled.View`
   flex-direction: row;
   max-width: 100%;
+  justify-content: center;
   background: #fff;
 `;
 
 export const ItemMenu = styled.TouchableOpacity`
   width: 33%;
+  align-items: center;
   height: 40px;
   margin-top: 15px;
-  padding-left: 17px;
   background: #fff;
 `;
 
