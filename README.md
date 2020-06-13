@@ -7,7 +7,7 @@
 <h4 align="center">Clone da UI(Interface Grafica) do Aplicativo da Vivo: "Meu Vivo Movel" para Android.</h4>
 
 <h1 align="center">
-<img src="assets/Inicio.jpg?raw=true" alt="Imagem do Aplicativo" width="300px">
+<img src=".github/Inicio.jpg?raw=true" alt="Imagem do Aplicativo" width="300px">
 </h1>
 
 ## 💻 Informações:
@@ -21,7 +21,7 @@ Clone similar apenas da interface grafica, sem funções ou contatos com API. A 
 Feito com [React Native](https://reactnative.dev/) usando:
 
 - Async Storage
-- React Native Text-Input-Mask
+- [React Native Text-Input-Mask ( Fork )](https://github.com/drawciamage/react-native-text-input-mask)
 - React Navigation
 - React Navigation Stack
 - React Navigation BottomTabs
