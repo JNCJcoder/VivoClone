@@ -31,7 +31,7 @@ export default function Login({ navigation }) {
   });
 
   const Verificar = () => {
-    if (telefoneUnmasked.length === 11) {
+    if (telefoneUnmasked.length >= 10) {
       Keyboard.dismiss();
       AtualizarNumero(telefoneUnmasked);
       AtualizarNumeroFormatado(telefone);
@@ -61,7 +61,7 @@ export default function Login({ navigation }) {
   };
 
   useEffect(() => {
-    if (telefoneUnmasked.length < 11) {
+    if (telefoneUnmasked.length < 10) {
       setButtonDisabled(true);
     } else {
       setButtonDisabled(false);
@@ -73,7 +73,7 @@ export default function Login({ navigation }) {
       <Container>
         <Description>Faça login com seu numero de telefone</Description>
         <Telefone
-          mask={'([00]) [0] [0000]-[0000]'}
+          mask={'([00]) [000000000]'}
           placeholder="Entre com seu DDD + Celular Vivo"
           placeholderTextColor="#999"
           autoCapitalize="none"
