@@ -7,13 +7,14 @@ import Color from '../../../config/Theme';
 
 export const Container = styled.View`
   flex: 1;
+  justify-content: center;
   background: ${Color.background};
 `;
 
 export const Description = styled.Text`
   margin-top: 10px;
-  font-size: 17px;
   align-self: center;
+  font-size: 17px;
 `;
 
 export const Telefone = styled(TextInputMask)`
