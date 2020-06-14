@@ -4,10 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Color from './config/Theme';
 import { Perfil, Aura, Descubra, Suporte } from './pages';
@@ -126,15 +123,14 @@ function MeuPlano() {
           headerLeft: null,
           headerStyle: { backgroundColor: Color.primary },
           headerTintColor: Color.secondary,
+          gestureEnabled: true,
           headerRight: () => (
             // eslint-disable-next-line react-native/no-inline-styles
             <TouchableOpacity style={{ right: 15 }}>
               <Icon name="ios-refresh" size={30} color="white" />
             </TouchableOpacity>
           ),
-          gestureEnabled: true,
           gestureDirection: 'horizontal',
-          CardStyleInterpolators: CardStyleInterpolators.forHorizontalIOS,
         }}>
         <Stack.Screen name="Consumo" component={Consumo} />
         <Stack.Screen name="Conta" component={Conta} />
