@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Keyboard, Alert } from 'react-native';
 
 import { PegarToken, GerarSessao } from '../../../services/api';
@@ -12,6 +12,12 @@ export default function SMS({ navigation }) {
   navigation.setOptions({
     headerLeft: null,
   });
+
+  useEffect(() => {
+    if (tokenUnmasked.length === 5) {
+      Verificar();
+    }
+  }, [tokenUnmasked]);
 
   const Verificar = async () => {
     // Chama API e Verifica Existencia do Numero
@@ -42,9 +48,6 @@ export default function SMS({ navigation }) {
           onChangeText={(formatted, extracted) => {
             setToken(formatted);
             setTokenUnmasked(extracted);
-            if (extracted.length === 5 && tokenUnmasked.length === 5) {
-              Verificar();
-            }
           }}
           onSubmitEditing={Verificar}
         />
