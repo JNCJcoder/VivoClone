@@ -6,6 +6,8 @@ import {
   Container,
   PlanoContainer,
   PlanoNome,
+  ConsumosContainer,
+  RenovaContainer,
   MinMaxContainer,
   MinUso,
   MaxUso,
@@ -45,19 +47,23 @@ export default function Consumo() {
           <BarraDeUso />
           <Renova>Renova em 26/03</Renova>
           <Barrinha />
-          <MinMaxContainer>
+          <RenovaContainer>
             <CircleBarBlue />
-            <Renova>
-              Consumo{"            "} 0% {"             "} 0GB
-            </Renova>
-          </MinMaxContainer>
+            <ConsumosContainer>
+              <Renova>Consumo</Renova>
+              <Renova>0%</Renova>
+              <Renova>0GB</Renova>
+            </ConsumosContainer>
+          </RenovaContainer>
           <Barrinha />
-          <MinMaxContainer>
+          <RenovaContainer>
             <CircleBar />
-            <Renova>
-              Disponivel{"         "} 100% {"        "} 4,5GB
-            </Renova>
-          </MinMaxContainer>
+            <ConsumosContainer>
+              <Renova>Disponivel</Renova>
+              <Renova>100%</Renova>
+              <Renova>4,5GB</Renova>
+            </ConsumosContainer>
+          </RenovaContainer>
         </PlanoContainer>
         <DetailContainer>
           <DetailItem>

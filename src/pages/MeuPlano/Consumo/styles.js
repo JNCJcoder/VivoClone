@@ -1,8 +1,8 @@
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from "react-native-vector-icons/Ionicons";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Color from '../../../config/Theme';
+import Color from "../../../config/Theme";
 
 export const Container = styled.ScrollView`
   flex: 1;
@@ -45,6 +45,18 @@ export const PlanoNome = styled.Text`
   font-weight: bold;
   color: #000;
   align-self: center;
+`;
+
+export const ConsumosContainer = styled.View`
+  flex: 1;
+  padding-right: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const RenovaContainer = styled.View`
+  flex: 1;
+  flex-direction: row;
 `;
 
 export const MinMaxContainer = styled.View`
