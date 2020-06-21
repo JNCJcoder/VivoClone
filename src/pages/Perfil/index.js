@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { TouchableOpacity, Alert } from 'react-native';
+import React, { useEffect, useState } from "react";
+import { TouchableOpacity, Alert } from "react-native";
 
 import {
   PegarNome,
   PegarNumeroFormatado,
   DeletarSessao,
-} from '../../services/api';
+} from "../../services/api";
 import {
   Container,
   PerfilContainer,
@@ -21,13 +21,13 @@ import {
   LastIconic,
   ConfigTitulo,
   Versao,
-} from './styles';
+} from "./styles";
 
-const FotoPerfil = require('../../assets/user.png');
+const FotoPerfil = require("../../assets/user.png");
 
 export default function Perfil({ navigation }) {
-  const [Numero, setNumero] = useState('');
-  const [Nome, setNome] = useState('');
+  const [Numero, setNumero] = useState("");
+  const [Nome, setNome] = useState("");
 
   useEffect(() => {
     GetPerfil();
@@ -43,7 +43,8 @@ export default function Perfil({ navigation }) {
       <TouchableOpacity
         // eslint-disable-next-line react-native/no-inline-styles
         style={{ right: 15 }}
-        onPress={() => alertarSaida()}>
+        onPress={() => alertarSaida()}
+      >
         <Iconic name="ios-log-out" size={30} color="white" />
       </TouchableOpacity>
     ),
@@ -51,19 +52,19 @@ export default function Perfil({ navigation }) {
 
   const alertarSaida = () => {
     Alert.alert(
-      'Tem certeza que deseja sair?',
-      'Se você sair o login, você tera que começar novamente na proxima vez.',
+      "Tem certeza que deseja sair?",
+      "Se você sair o login, você tera que começar novamente na proxima vez.",
       [
         {
-          text: 'NÃO SAIR',
+          text: "NÃO SAIR",
         },
         {
-          text: 'SAIR',
+          text: "SAIR",
           onPress: () => {
             DeletarSessao();
-            navigation.navigate('Inicio');
+            navigation.navigate("Inicio");
           },
-          style: 'cancel',
+          style: "cancel",
         },
       ],
       { cancelable: false },
@@ -71,7 +72,7 @@ export default function Perfil({ navigation }) {
   };
 
   return (
-    <Container>
+    <Container showsVerticalScrollIndicator={false}>
       <PerfilContainer>
         <PerfilFoto source={FotoPerfil} />
         <InfoPerfil>

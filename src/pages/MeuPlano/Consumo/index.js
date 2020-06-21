@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { Header } from '../../../components';
-import { PegarPlano } from '../../../services/api';
+import { Header } from "../../../components";
+import { PegarPlano } from "../../../services/api";
 import {
   Container,
   PlanoContainer,
@@ -26,7 +26,7 @@ import {
   CircleBar,
   CircleBarBlue,
   Iconic,
-} from './styles';
+} from "./styles";
 
 export default function Consumo() {
   const Plano = PegarPlano();
@@ -34,7 +34,7 @@ export default function Consumo() {
   return (
     <>
       <Header Numeral={1} />
-      <Container>
+      <Container showsVerticalScrollIndicator={false}>
         <Atualizado>Atualizado em 06/03/2020 as 20:05</Atualizado>
         <PlanoContainer>
           <PlanoNome>{Plano.nome}</PlanoNome>
@@ -48,14 +48,14 @@ export default function Consumo() {
           <MinMaxContainer>
             <CircleBarBlue />
             <Renova>
-              Consumo{'            '} 0% {'             '} 0GB
+              Consumo{"            "} 0% {"             "} 0GB
             </Renova>
           </MinMaxContainer>
           <Barrinha />
           <MinMaxContainer>
             <CircleBar />
             <Renova>
-              Disponivel{'         '} 100% {'        '} 4,5GB
+              Disponivel{"         "} 100% {"        "} 4,5GB
             </Renova>
           </MinMaxContainer>
         </PlanoContainer>

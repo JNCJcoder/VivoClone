@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Container,
@@ -12,14 +12,12 @@ import {
   Button,
   ButtonText,
   Iconic,
-  Iconic1,
-  Iconic2,
   IconicHammer,
-} from './styles';
+} from "./styles";
 
 export default function Suporte() {
   return (
-    <Container>
+    <Container showsVerticalScrollIndicator={false}>
       <PerfilContainer>
         <Titulo>Suporte</Titulo>
         <TituloName>Como Posso Ajudar?</TituloName>

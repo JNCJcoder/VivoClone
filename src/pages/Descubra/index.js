@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Container,
@@ -19,11 +19,11 @@ import {
   DescriptionAds,
   ValueAds,
   TrialAds,
-} from './styles';
+} from "./styles";
 
 export default function Descubra() {
   return (
-    <Container>
+    <Container showsVerticalScrollIndicator={false}>
       <PerfilContainer>
         <Titulo>Descubra</Titulo>
         <ImagemAnuncio />
@@ -38,7 +38,8 @@ export default function Descubra() {
       <OfertasContainer
         horizontal={true}
         pagingEnabled={true}
-        showsHorizontalScrollIndicator={true}>
+        showsHorizontalScrollIndicator={true}
+      >
         <Ofertas />
         <Ofertas />
       </OfertasContainer>

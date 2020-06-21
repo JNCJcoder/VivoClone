@@ -25,7 +25,6 @@ export default function Inicio({ navigation: { navigate } }) {
 
   const GetSession = async () => {
     const Session = RetornarSessao();
-    console.log(Session);
     if (Session === "1") {
       navigate("Rota");
     }

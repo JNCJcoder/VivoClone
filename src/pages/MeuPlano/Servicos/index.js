@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import { Header, ItemMenu } from '../../../components';
-import { Container } from './styles';
+import { Header, ItemMenu } from "../../../components";
+import { Container } from "./styles";
 
 export default function Servicos() {
   return (
     <>
       <Header Numeral={3} />
-      <Container>
+      <Container showsVerticalScrollIndicator={false}>
         <ItemMenu>Detalhe do Plano</ItemMenu>
         <ItemMenu>Troca de Plano</ItemMenu>
         <ItemMenu>Troca de Aparelho</ItemMenu>

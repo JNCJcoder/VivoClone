@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { Header } from '../../../components';
-import { PegarConta } from '../../../services/api';
+import { Header } from "../../../components";
+import { PegarConta } from "../../../services/api";
 import {
   Container,
   Titulo,
@@ -18,9 +18,9 @@ import {
   WhiteButton,
   ButtonText,
   WhiteButtonText,
-} from './styles';
+} from "./styles";
 
-const Dots = require('../../../assets/three-dots.png');
+const Dots = require("../../../assets/three-dots.png");
 
 export default function Conta() {
   const Contas = PegarConta();
@@ -28,7 +28,7 @@ export default function Conta() {
   return (
     <>
       <Header Numeral={2} />
-      <Container>
+      <Container showsVerticalScrollIndicator={false}>
         <Titulo>2° via de contas</Titulo>
         <PlanoID>{Contas.nome}</PlanoID>
         <ContaContainer>
