@@ -1,24 +1,24 @@
-import React, { useEffect } from 'react';
-import { TouchableOpacity, BackHandler } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import React, { useEffect } from "react";
+import { TouchableOpacity, BackHandler } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
-import Color from './config/Theme';
-import { Perfil, Aura, Descubra, Suporte } from './pages';
-import { Inicio, Login, SMS, TOS } from './pages/Inicio';
-import { Consumo, Conta, Servicos } from './pages/MeuPlano';
+import Color from "./config/Theme";
+import { Perfil, Aura, Descubra, Suporte } from "./pages";
+import { Inicio, Login, SMS, TOS } from "./pages/Inicio";
+import { Consumo, Conta, Servicos } from "./pages/MeuPlano";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 export default function RotaInicial() {
   useEffect(() => {
-    BackHandler.addEventListener('hardwareBackPress', () => true);
+    BackHandler.addEventListener("hardwareBackPress", () => true);
     return () =>
-      BackHandler.removeEventListener('hardwareBackPress', () => true);
+      BackHandler.removeEventListener("hardwareBackPress", () => true);
   }, []);
 
   return (
@@ -31,7 +31,8 @@ export default function RotaInicial() {
             backgroundColor: Color.primary,
           },
           headerTintColor: Color.secondary,
-        }}>
+        }}
+      >
         <Stack.Screen
           name="Inicio"
           component={Inicio}
@@ -41,21 +42,21 @@ export default function RotaInicial() {
           name="Login"
           component={Login}
           options={{
-            title: 'Identifique-se',
+            title: "Identifique-se",
           }}
         />
         <Stack.Screen
           name="SMS"
           component={SMS}
           options={{
-            title: 'Verifique seu Número',
+            title: "Verifique seu Número",
           }}
         />
         <Stack.Screen
           name="TOS"
           component={TOS}
           options={{
-            title: 'Termos e condições',
+            title: "Termos e condições",
           }}
         />
         <Stack.Screen
@@ -75,34 +76,35 @@ function Routes() {
           let iconName;
 
           switch (route.name) {
-            case 'Meu Plano':
-              iconName = focused ? 'ios-stats' : 'ios-stats';
+            case "Meu Plano":
+              iconName = focused ? "ios-stats" : "ios-stats";
               break;
-            case 'Descubra':
-              iconName = focused ? 'md-eye' : 'md-eye';
+            case "Descubra":
+              iconName = focused ? "md-eye" : "md-eye";
               break;
-            case 'Aura':
-              iconName = focused ? 'ios-keypad' : 'ios-keypad';
+            case "Aura":
+              iconName = focused ? "ios-keypad" : "ios-keypad";
               break;
-            case 'Suporte':
-              iconName = focused ? 'ios-construct' : 'ios-construct';
+            case "Suporte":
+              iconName = focused ? "ios-construct" : "ios-construct";
               break;
-            case 'Perfil':
-              iconName = focused ? 'ios-person' : 'ios-person';
+            case "Perfil":
+              iconName = focused ? "ios-person" : "ios-person";
               break;
           }
 
           // You can return any component that you like here!
-          return <Icon name={iconName} size={28} color={color} />;
+          return <Icon name={iconName} size={30} color={color} />;
         },
       })}
       tabBarOptions={{
         activeTintColor: Color.primary,
-        inactiveTintColor: 'gray',
+        inactiveTintColor: "gray",
         labelStyle: {
           fontSize: 12,
         },
-      }}>
+      }}
+    >
       <Tab.Screen name="Meu Plano" component={MeuPlano} />
       <Tab.Screen name="Descubra" component={Descubra} />
       <Tab.Screen name="Aura" component={Aura} />
@@ -119,7 +121,7 @@ function MeuPlano() {
         initialRouteName="Consumo"
         headerMode="float"
         screenOptions={{
-          title: 'Meu Plano',
+          title: "Meu Plano",
           headerLeft: null,
           headerStyle: { backgroundColor: Color.primary },
           headerTintColor: Color.secondary,
@@ -130,8 +132,9 @@ function MeuPlano() {
               <Icon name="ios-refresh" size={30} color="white" />
             </TouchableOpacity>
           ),
-          gestureDirection: 'horizontal',
-        }}>
+          gestureDirection: "horizontal",
+        }}
+      >
         <Stack.Screen name="Consumo" component={Consumo} />
         <Stack.Screen name="Conta" component={Conta} />
         <Stack.Screen name="Servicos" component={Servicos} />
@@ -148,7 +151,7 @@ function meuPerfil() {
           name="Perfil"
           component={Perfil}
           options={{
-            title: 'Perfil',
+            title: "Perfil",
             headerLeft: null,
             gestureEnabled: false,
             headerStyle: { backgroundColor: Color.primary },
