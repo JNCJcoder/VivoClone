@@ -26,7 +26,6 @@ import {
   DetailText,
   Barrinha,
   CircleBar,
-  CircleBarBlue,
   Iconic,
 } from "./styles";
 
@@ -48,7 +47,7 @@ export default function Consumo() {
           <Renova>Renova em 26/03</Renova>
           <Barrinha />
           <RenovaContainer>
-            <CircleBarBlue />
+            <CircleBar Blue />
             <ConsumosContainer>
               <Renova>Consumo</Renova>
               <Renova>0%</Renova>

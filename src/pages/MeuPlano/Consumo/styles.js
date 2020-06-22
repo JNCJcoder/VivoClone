@@ -88,12 +88,8 @@ export const CircleBar = styled.View`
   margin-top: 8px;
   margin-left: 8px;
   margin-right: 10px;
-  background-color: rgb(232, 236, 239);
+  background-color: ${(props) => (props.Blue ? Color.primary : "#e8ecef")};
   border-radius: 6px;
-`;
-
-export const CircleBarBlue = styled(CircleBar)`
-  background-color: ${Color.primary};
 `;
 
 export const Renova = styled.Text`
