@@ -1,19 +1,17 @@
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from "@react-native-community/async-storage";
 
-export const GuardarSessao = async (token) => {
+export const GuardarSessaoAsync = async (token) => {
   try {
-    await AsyncStorage.setItem('Token_Key', token);
+    await AsyncStorage.setItem("Token_Key", token);
   } catch (e) {
     console.log(e);
   }
 };
 
-export const RetornarSessao = async () => {
+export const RetornarSessaoAsync = async () => {
   try {
-    const value = await AsyncStorage.getItem('Token_Key');
-    if (value !== null) {
-      return value;
-    }
+    const value = await AsyncStorage.getItem("Token_Key");
+    return value;
   } catch (e) {
     console.log(e);
   }
@@ -21,13 +19,13 @@ export const RetornarSessao = async () => {
 
 export const GuardarNumero = async (Numero) => {
   try {
-    await AsyncStorage.setItem('@Telefone', '' + Numero);
+    await AsyncStorage.setItem("@Telefone", "" + Numero);
   } catch (e) {}
 };
 
 export const RetornarNumero = async () => {
   try {
-    const value = await AsyncStorage.getItem('@Telefone');
+    const value = await AsyncStorage.getItem("@Telefone");
     if (value !== null) {
       return +value;
     }
@@ -36,13 +34,13 @@ export const RetornarNumero = async () => {
 
 export const GuardarNumeroFormatado = async (Numero) => {
   try {
-    await AsyncStorage.setItem('@TelefoneFormatado', Numero);
+    await AsyncStorage.setItem("@TelefoneFormatado", Numero);
   } catch (e) {}
 };
 
 export const RetornarNumeroFormatado = async () => {
   try {
-    const value = await AsyncStorage.getItem('@TelefoneFormatado');
+    const value = await AsyncStorage.getItem("@TelefoneFormatado");
     if (value !== null) {
       return value;
     }

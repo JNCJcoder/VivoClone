@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
 import {
-  GuardarSessao,
+  GuardarSessaoAsync,
+  RetornarSessaoAsync,
   GuardarNumero,
   RetornarNumero,
   GuardarNumeroFormatado,
   RetornarNumeroFormatado,
-} from './storage';
+} from "./storage";
 
 // FAKE API
 
@@ -15,22 +16,22 @@ Cliente.plano = {};
 Cliente.conta = {};
 
 // Cliente
-Cliente.nome = 'Fulano da silva';
+Cliente.nome = "Fulano da silva";
 Cliente.numero = 0;
-Cliente.numeroFormatado = '0';
-Cliente.token = '00000';
-Cliente.Sessao = '0';
+Cliente.numeroFormatado = "0";
+Cliente.token = "00000";
+Cliente.Sessao = "0";
 
 // Plano
-Cliente.plano.nome = 'Internet Mensal - Vivo Controle I 4,5GB';
-Cliente.plano.disponivel = '4,5Gb';
-Cliente.plano.consumo = '0Gb';
-Cliente.plano.renova = '26/03';
+Cliente.plano.nome = "Internet Mensal - Vivo Controle I 4,5GB";
+Cliente.plano.disponivel = "4,5Gb";
+Cliente.plano.consumo = "0Gb";
+Cliente.plano.renova = "26/03";
 
 // Conta
-Cliente.conta.nome = 'VIVOCONTROLEDIGITAL_4,5GB ILIM_';
-Cliente.conta.preco = '67,96';
-Cliente.conta.vence = '10/03/2020';
+Cliente.conta.nome = "VIVOCONTROLEDIGITAL_4,5GB ILIM_";
+Cliente.conta.preco = "67,96";
+Cliente.conta.vence = "10/03/2020";
 
 export const AtualizarNumero = (NovoNumero) => {
   GuardarNumero(NovoNumero);
@@ -50,7 +51,7 @@ export const AtualizarNumeroFormatado = (NovoNumero) => {
 };
 
 export const PegarNumeroFormatado = () => {
-  if (Cliente.numeroFormatado === '0') {
+  if (Cliente.numeroFormatado === "0") {
     Cliente.numeroFormatado = RetornarNumeroFormatado();
   }
   return Cliente.numeroFormatado;
@@ -71,24 +72,25 @@ export const PegarToken = () => {
 // Sessão
 
 export const GerarSessao = async () => {
-  Cliente.Sessao = '1';
-  await GuardarSessao('1');
-  return '1';
+  Cliente.Sessao = "1";
+  await GuardarSessaoAsync("1");
+  return "1";
 };
 
-export const PegarSessao = async (Session) => {
+export const PegarSessao = (Session) => {
   Cliente.Sessao = Session;
 };
 
-export const RetornarSessao = () => {
-  return Cliente.Sessao;
+export const RetornarSessao = async () => {
+  const Session = await RetornarSessaoAsync();
+  return (Cliente.Sessao = Session);
 };
 
 export const DeletarSessao = () => {
-  Cliente.Sessao = '0';
-  GuardarSessao('0');
+  Cliente.Sessao = "0";
+  GuardarSessaoAsync("0");
   AtualizarNumero(0);
-  AtualizarNumeroFormatado('0');
+  AtualizarNumeroFormatado("0");
 };
 
 // Plano
