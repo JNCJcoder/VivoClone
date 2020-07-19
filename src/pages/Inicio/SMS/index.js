@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Keyboard, Alert } from 'react-native';
+import React, { useState, useEffect } from "react";
+import { Keyboard, Alert } from "react-native";
 
-import { PegarToken, GerarSessao } from '../../../services/api';
-import { Container, Description, Telefone } from './styles';
+import { PegarToken, GerarSessao } from "../../../services/api";
+import { Container, Description, Telefone } from "./styles";
 
 export default function SMS({ navigation }) {
-  const [token, setToken] = useState('');
-  const [tokenUnmasked, setTokenUnmasked] = useState('');
+  const [token, setToken] = useState("");
+  const [tokenUnmasked, setTokenUnmasked] = useState("");
   const ContaToken = PegarToken();
 
   navigation.setOptions({
@@ -25,11 +25,11 @@ export default function SMS({ navigation }) {
     if (tokenUnmasked === ContaToken) {
       await GerarSessao();
       Keyboard.dismiss();
-      setToken('');
-      navigation.navigate('Rota');
+      setToken("");
+      navigation.navigate("Ola");
     } else {
-      Alert.alert('Numero Invalido');
-      setToken('');
+      Alert.alert("Numero Invalido");
+      setToken("");
     }
   };
 
@@ -38,7 +38,7 @@ export default function SMS({ navigation }) {
       <Container>
         <Description>Confirme o codigo enviado por SMS.</Description>
         <Telefone
-          mask={'[0]  [0]  [0]  [0]  [0]'}
+          mask={"[0]  [0]  [0]  [0]  [0]"}
           placeholderTextColor="#999"
           autoCapitalize="none"
           autoCorrect={false}

@@ -8,7 +8,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Color from "./config/Theme";
 import { Perfil, Aura, Descubra, Suporte } from "./pages";
-import { Inicio, Login, SMS, TOS } from "./pages/Inicio";
+import { Inicio, Login, SMS, TOS, Ola } from "./pages/Inicio";
 import { Consumo, Conta, Servicos } from "./pages/MeuPlano";
 
 const Tab = createBottomTabNavigator();
@@ -58,6 +58,11 @@ export default function RotaInicial() {
           options={{
             title: "Termos e condições",
           }}
+        />
+        <Stack.Screen
+          name="Ola"
+          component={Ola}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Rota"
