@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { StatusBar } from "react-native";
 
 import { RetornarSessao } from "../../../services/api";
 import {
@@ -24,14 +25,15 @@ export default function Inicio({ navigation: { navigate } }) {
   }, []);
 
   const GetSession = async () => {
-    const Session = RetornarSessao();
-    if (Session === "1") {
+    const Session = await RetornarSessao();
+    if (Session == "1") {
       navigate("Rota");
     }
   };
 
   return (
     <Container>
+      <StatusBar translucent backgroundColor="transparent" />
       <InicialContainer>
         <Logo source={VivoLogo} resizeMode="stretch" />
         <InfoContainer
@@ -40,8 +42,7 @@ export default function Inicio({ navigation: { navigate } }) {
           showsHorizontalScrollIndicator={true}
           scrollEventThrottle={200}
           decelerationRate="fast"
-          contentContainerStyle={{ alignitems: "center" }}
-        >
+          contentContainerStyle={{ alignitems: "center" }}>
           <InfoItem>
             <Titulo>Viva mais no seu tempo com a Vivo</Titulo>
             <Description>

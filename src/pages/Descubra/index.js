@@ -38,8 +38,7 @@ export default function Descubra() {
       <OfertasContainer
         horizontal={true}
         pagingEnabled={true}
-        showsHorizontalScrollIndicator={true}
-      >
+        showsHorizontalScrollIndicator={true}>
         <Ofertas />
         <Ofertas />
       </OfertasContainer>

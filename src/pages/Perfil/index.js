@@ -43,8 +43,7 @@ export default function Perfil({ navigation }) {
       <TouchableOpacity
         // eslint-disable-next-line react-native/no-inline-styles
         style={{ right: 15 }}
-        onPress={() => alertarSaida()}
-      >
+        onPress={() => alertarSaida()}>
         <Iconic name="ios-log-out" size={30} color="white" />
       </TouchableOpacity>
     ),

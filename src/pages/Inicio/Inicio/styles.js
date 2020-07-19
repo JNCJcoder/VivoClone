@@ -1,19 +1,19 @@
 /* eslint-disable * */
 
-import { Dimensions } from 'react-native';
+import { Dimensions } from "react-native";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Color from '../../../config/Theme';
+import Color from "../../../config/Theme";
 
-const screenWidth = Dimensions.get('window').width;
+const screenWidth = Dimensions.get("window").width;
 
 //
 // Container
 //
 export const Container = styled.View`
   flex: 1;
-  padding-top: 25px;
+  padding-top: 40px;
   justify-content: center;
   background: #000;
 `;

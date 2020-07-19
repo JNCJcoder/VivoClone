@@ -31,8 +31,7 @@ export default function RotaInicial() {
             backgroundColor: Color.primary,
           },
           headerTintColor: Color.secondary,
-        }}
-      >
+        }}>
         <Stack.Screen
           name="Inicio"
           component={Inicio}
@@ -108,8 +107,7 @@ function Routes() {
         labelStyle: {
           fontSize: 12,
         },
-      }}
-    >
+      }}>
       <Tab.Screen name="Meu Plano" component={MeuPlano} />
       <Tab.Screen name="Descubra" component={Descubra} />
       <Tab.Screen name="Aura" component={Aura} />
@@ -138,8 +136,7 @@ function MeuPlano() {
             </TouchableOpacity>
           ),
           gestureDirection: "horizontal",
-        }}
-      >
+        }}>
         <Stack.Screen name="Consumo" component={Consumo} />
         <Stack.Screen name="Conta" component={Conta} />
         <Stack.Screen name="Servicos" component={Servicos} />
