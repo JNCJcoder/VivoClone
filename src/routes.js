@@ -9,7 +9,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Color from "./config/Theme";
 import { Perfil, Aura, Descubra, Suporte } from "./pages";
 import { Inicio, Login, SMS, TOS, Ola } from "./pages/Inicio";
-import { Consumo, Conta, Servicos } from "./pages/MeuPlano";
+import MeuPlano from "./pages/MeuPlano";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -114,34 +114,6 @@ function Routes() {
       <Tab.Screen name="Suporte" component={Suporte} />
       <Tab.Screen name="Perfil" component={meuPerfil} />
     </Tab.Navigator>
-  );
-}
-
-function MeuPlano() {
-  return (
-    <>
-      <Stack.Navigator
-        initialRouteName="Consumo"
-        headerMode="float"
-        screenOptions={{
-          title: "Meu Plano",
-          headerLeft: null,
-          headerStyle: { backgroundColor: Color.primary },
-          headerTintColor: Color.secondary,
-          gestureEnabled: true,
-          headerRight: () => (
-            // eslint-disable-next-line react-native/no-inline-styles
-            <TouchableOpacity style={{ right: 15 }}>
-              <Icon name="ios-refresh" size={30} color="white" />
-            </TouchableOpacity>
-          ),
-          gestureDirection: "horizontal",
-        }}>
-        <Stack.Screen name="Consumo" component={Consumo} />
-        <Stack.Screen name="Conta" component={Conta} />
-        <Stack.Screen name="Servicos" component={Servicos} />
-      </Stack.Navigator>
-    </>
   );
 }
 

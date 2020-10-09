@@ -1,7 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Header } from "../../../components";
-import { PegarPlano } from "../../../services/api";
+import { PegarPlano } from '../../../services/api';
 import {
   Container,
   PlanoContainer,
@@ -27,14 +26,13 @@ import {
   Barrinha,
   CircleBar,
   Iconic,
-} from "./styles";
+} from './styles';
 
 export default function Consumo() {
   const Plano = PegarPlano();
 
   return (
     <>
-      <Header Numeral={1} />
       <Container showsVerticalScrollIndicator={false}>
         <Atualizado>Atualizado em 06/03/2020 as 20:05</Atualizado>
         <PlanoContainer>

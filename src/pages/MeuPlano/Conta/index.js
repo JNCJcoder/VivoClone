@@ -1,15 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { Header, ContaDoMes } from "../../../components";
-import { PegarConta } from "../../../services/api";
-import { Container, Titulo, PlanoID } from "./styles";
+import { ContaDoMes } from '../../../components';
+import { PegarConta } from '../../../services/api';
+import { Container, Titulo, PlanoID } from './styles';
 
 export default function Conta() {
   const Contas = PegarConta();
 
   return (
     <>
-      <Header Numeral={2} />
       <Container showsVerticalScrollIndicator={false}>
         <Titulo>2° via de contas</Titulo>
         <PlanoID>{Contas.nome}</PlanoID>
